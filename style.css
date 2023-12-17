@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(109.6deg, rgb(6, 2, 2) 32.4%, rgb(137, 30, 47) 98.8%);
+    color: white;
+}
+
+body h1{
+    margin: 10px auto;
+    padding: 5px auto;
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+
+body h1 span{
+    color: hsl(348, 83%, 47%);
+}
+
+.container {
+    display: flex;
+    height: 92vh;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    height: 620px;
+    width: 400px;
+    border-radius: 20px;
+    margin: 10px 10px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    ;
+}
+
+.card .heading {
+    position: relative;
+    top: -35px;
+    text-align: left;
+    color: hsl(348, 83%, 47%);
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+}
+
+.card-3 {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    text-align: center;
+}
+
+.card-3 img {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    top: -23px;
+    border-radius: 20px 20px 10px 10px;
+}
+
+.card-3 #userName {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
+    letter-spacing: 1.5px;
+    margin: -15px 0px 5px 0px;
+    text-transform: uppercase;
+}
+
+.card-3 h2 {
+    margin: 2.5px 0px 10px 0px;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+
+.card-3 hr {
+    margin: 0px 20px;
+    height: 1px;
+    background: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+}
+
+.card-3 {
+    background-color: transparent;
+    perspective: 1000px;
+}
+
+.card-3-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.card-3:hover .card-3-inner {
+    transform: rotateY(180deg);
+}
+
+.front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.back {
+    position: absolute;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+.card-3 .back h1 {
+    color: #FFFFFF;
+    margin: 3px 0px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
+    letter-spacing: 1.2px;
+}
+
+.card-3 .back h2 {
+    color: beige;
+    margin: 2.5px 0px 10px 0px;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+
+.card-3 .back hr {
+    margin: 0px 20px 10px 20px;
+    height: 0.5px;
+    background: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+}
+
+.card-3 .back .text {
+    color: whitesmoke;
+    padding: 0px 20px;
+    word-spacing: 5px;
+    letter-spacing: .8px;
+    font-size: 14.5px;
+    font-family: sans-serif;
+}
+
+.btn {
+    background-color: #000000;
+    border: 2px solid #1A1A1A;
+    border-radius: 15px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: "Segoe UI", Helvetica, Arial;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 20px 20px;
+    min-height: 60px;
+    min-width: 0;
+    padding: 16px 24px;
+    text-align: center;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+}
+
+.btn:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+@media screen and (max-width: 900px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        overflow: scroll;
+        height: auto;
+    }
+
+    .card {
+        margin: 30px 10px;
+    }
+
+    .card .heading {
+        top: -30px;
+    }
+
+}
